@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.autobots.automanager.entidades.Cliente;
+import com.autobots.automanager.entidades.Telefone;
 
 @Component
 public class ClienteSelecionador {
@@ -14,6 +15,15 @@ public class ClienteSelecionador {
 			if (cliente.getId() == id) {
 				selecionado = cliente;
 			}
+		}
+		return selecionado;
+	}
+	public List<Telefone> selecionarTelefone(List<Cliente> clientes, long id) {
+		List<Telefone> selecionado = null;
+		for(Cliente cliente : clientes) {
+			if(cliente.getId() == id) {
+				selecionado = cliente.getTelefones();
+			} 
 		}
 		return selecionado;
 	}

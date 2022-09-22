@@ -28,7 +28,6 @@ public class TelefoneControle {
 	private ClienteRepositorio repositorioCliente;
 	@Autowired
 	private TelefoneSelecionador selecionador;
-
 	
 	@GetMapping("/telefones")
 	public ResponseEntity<List<Telefone>> obterTelefones(){
@@ -41,6 +40,7 @@ public class TelefoneControle {
 			return resposta;
 		}
 	}
+
 	@GetMapping("/telefones/{tellId}")
 	public ResponseEntity<Telefone> obterTelefone(@PathVariable Long tellId){
 		List<Telefone> telefones = repositorio.findAll();
@@ -100,7 +100,7 @@ public class TelefoneControle {
 		}
 		return new ResponseEntity<>(status);
 	}
-	
+
 	
 	
 	

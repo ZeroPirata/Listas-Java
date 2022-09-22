@@ -24,7 +24,7 @@ public class AdicionadorLinkCliente implements AdicionadorLink<Cliente> {
 			cliente.add(linkProprio);
 		}
 	}
-
+	
 	@Override
 	public void adicionarLink(Cliente objeto) {
 		Link linkProprio = WebMvcLinkBuilder

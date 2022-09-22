@@ -71,7 +71,7 @@ public class DocumentoControle {
 		}
 		return new ResponseEntity<>(status);
 	}
-	@PutMapping("/telefones/editar/{docId}")
+	@PutMapping("/documentos/editar/{docId}")
 	public ResponseEntity<?> editarTelefone(
 			@PathVariable Long docId,
 			@RequestBody Documento atualizacao){
@@ -87,7 +87,7 @@ public class DocumentoControle {
 		}
 		return new ResponseEntity<>(status);
 	}
-	@DeleteMapping("/telefones/excluir/{clienteId}/{docId}")
+	@DeleteMapping("/documentos/excluir/{clienteId}/{docId}")
 	public ResponseEntity<?> excluirTelefone(
 			@PathVariable Long docId, 
 			@PathVariable Long clienteId){
